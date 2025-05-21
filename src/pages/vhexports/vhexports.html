@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مركبات تم تسليمها</title>
+</head>
+<body>
+  <div class="container mt-4">
+    <h1 class="mb-4">مركبات تم تسليمها</h1>
+
+    <!-- Filter section -->
+    <div class="row mb-3">
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-vehicle-number" placeholder="رقم العجلة">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-vehicle-type" placeholder="نوع العجلة">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-model" placeholder="الموديل">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-color" placeholder="اللون">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-chassis-number" placeholder="رقم الشاسيه">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-plate-number" placeholder="رقم اللوحة">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-customs-case-number" placeholder="رقم الحالة الجمركية">
+      </div>
+      <div class="col-md-2">
+        <input type="date" class="form-control" id="filter-reception-date" placeholder="تاريخ الاستلام">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-parking-spot" placeholder="رقم موقف السيارات">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-book-number" placeholder="رقم الكتاب">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-book-quantity" placeholder="كمية الكتاب">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-reception-authority" placeholder="سلطة الاستلام">
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="filter-damage-percentage" placeholder="نسبة الضرر">
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary" class="searchBtn" id="filter-button">بحث</button>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-secondary" class="clearBtn" id="reset-button" style="display: none;">الغاء</button> <!-- Hidden initially -->
+      </div>
+    </div>
+
+    <!-- Impoundeds table -->
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th><input type="checkbox" id="select-all"></th>
+            <th>الرمز </th>
+            <th>رقم العجلة</th>
+            <th>نوع العجلة</th>
+            <th>الموديل</th>
+            <th>اللون</th>
+            <th>رقم الشاصي</th>
+            <th>رقم اللوحة</th>
+            <th>دعوة كمركية</th>
+            <th>تاريخ الاستلام</th>
+            <th>ساحة الحجز</th>
+            <th>رقم الكتاب</th>
+            <th>العدد </th>
+            <th>الجهة الواردة</th>
+            <th>نسبة الضرر</th>
+            <th>عرض المرفقات</th>
+            <th>عرض السكنر</th>
+            <th>تعديل</th>
+            <th>حذف</th>
+            <th>طبع A4</th>
+            <!-- <th>طبع A5</th>
+            <th>طبع 80mm</th> -->
+          </tr>
+        </thead>
+        <tbody id="impounded-table">
+          <!-- Table rows will be inserted here by impoundeds.js -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal for editing impounded -->
+  <div id="editImpoundedModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>تعديل العجلة</h2>
+      <label for="newVehicleNumber">رقم العجلة الجديد:</label>
+      <input type="text" id="newVehicleNumber">
+      <button id="saveEditButton">حفظ التعديلات</button>
+    </div>
+  </div>
+
+  <!-- Modal for viewing attachments -->
+  <div id="attachmentsModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>المرفقات</h2>
+      <ul id="attachments-list"></ul>
+    </div>
+  </div>
+
+  <!-- Modal for viewing scanned documents -->
+  <div id="documentsModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>المستندات الممسوحة ضوئياً</h2>
+      <a id="scannedDocumentLink" href="#" target="_blank">عرض المستند</a>
+    </div>
+  </div>
+
+  <script type="module" src="./impoundeds.js"></script>
+</body>
+</html>

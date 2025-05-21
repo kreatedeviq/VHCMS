@@ -1,0 +1,38 @@
+.date-time {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .impound-container {
+    margin: 30px auto;
+  }
+  .impound-box {
+    background-color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  .impound-box:hover {
+    transform: translateY(-5px);
+  }
+  .impound-box .icon {
+    font-size: 32px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  .impound-box .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .impound-box .value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #28a745;
+  }

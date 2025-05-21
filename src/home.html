@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>الرئيسية</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <link rel="stylesheet" href="resources/assets/styles/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="resources/assets/styles/global.css"> <!-- Link to the compiled global CSS file -->
+  <link rel="stylesheet" href="home.css"> <!-- Link to the compiled global CSS file -->
+  <link rel="stylesheet" href="pages/users/users.css">
+  <link rel="stylesheet" href="pages/vhimports/vhimports.css">
+  <link rel="stylesheet" href="pages/vhexports/vhexports.css">
+  <link rel="stylesheet" href="resources/assets/fonts/fontawesome/css/all.css"> <!-- Update this path as necessary -->
+
+</head>
+<body id="home-page">
+  <div class="sidebar">
+    <img src="resources/assets/images/logo.png" alt="Logo" class="logo">
+    <button id="home"><i class="fas fa-home icon"></i> الرئيسية</button>
+    <button id="btn1"><i class="fas fa-users icon"></i> المستخدمين</button>
+    <button id="btn4"><i class="fas fa-plus icon"></i> مستند استلام </button>
+    <button id="btn5"><i class="fas fa-file-export icon"></i> مستند تسليم </button>
+    <button id="btn9"><i class="fas fa-file-invoice icon"></i> فاتورة جديدة  </button>
+    <button id="btn2"><i class="fas fa-car icon"></i> المركبات المحجوزة</button>
+    <button id="btn3"><i class="fas fa-car-side icon"></i> المركبات المستلمة</button>
+    <button id="btn6"><i class="fas fa-bicycle icon"></i> الدراجات المحجوزة</button>
+    <button id="btn7"><i class="fas fa-bicycle icon"></i> الدراجات المستلمة</button>
+    <button id="btn8"><i class="fas fa-file-invoice icon"></i> سجلات المبيعات</button>
+    <button id="exitButton"><i class="fas fa-sign-out-alt icon"></i> خروج</button>
+</div>
+
+  
+  <div id="content" class="content">
+    <!-- Dynamic content will be loaded here -->
+     مرحبا بك
+     <!-- Add a div to display the date and time -->
+      <span id="dateTime" class="date-time">
+        <!-- This will hold the current date and time -->
+      </span>
+      <br>
+      
+      
+       <!-- Impounded Count Section -->
+    <div class="impound-container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="impound-box">
+            <i class="fas fa-car icon"></i>
+            <div class="title">المركبات المحجوزة</div>
+            <div class="value" id="receivedVehicles">0</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="impound-box">
+            <i class="fas fa-bicycle icon"></i>
+            <div class="title">الدراجات المحجوزة</div>
+            <div class="value" id="receivedBikes">0</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="impound-box">
+            <i class="fas fa-archive icon"></i>
+            <div class="title">المركبات المستلمة  </div>
+            <div class="value" id="deliveredVehicles">0</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="impound-box">
+            <i class="fas fa-truck icon"></i>
+            <div class="title"> الدراجات المستلمة</div>
+            <div class="value" id="deliveredBikes">0</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="impound-box">
+            <i class="fas fa-check-circle icon"></i>
+            <div class="title">فواتير بيع السيارات </div>
+            <div class="value" id="archivedVehicles">0</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="impound-box">
+            <i class="fas fa-clock icon"></i>
+            <div class="title">فواتير بيع الدراجات </div>
+            <div class="value" id="archivedBikes">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+
+
+  </div>
+
+   <!-- Load home.js as a module -->
+   <script type="module" src="./home.js"></script>
+   <script type="module" src="./resources/assets/styles/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسليم مركبة محجوزة</title>
+</head>
+<body dir="rtl">
+  <div class="container">
+    <h1>تسليم مركبة</h1>
+
+    <!-- Search for impounded details by unique code -->
+    <div class="row mb-3">
+      <div class="col">
+        <label for="impoundedUniqueCode" class="form-label">كود المحجوزة</label>
+        <input type="text" class="form-control" id="impoundedUniqueCode" required>
+        <button id="searchImpoundedButton" class="btn btn-primary mt-2">بحث</button>
+      </div>
+    </div>
+
+    <form id="addImpoundedForm">
+      <div class="row mb-3">
+        <div class="col">
+          <label for="vehicleNumber" class="form-label">رقم العجلة</label>
+          <input type="text" disabled class="form-control" id="vehicleNumber" required>
+        </div>
+        <div class="col">
+          <label for="vehicleType" class="form-label">نوع العجلة</label>
+          <select disabled class="form-select" id="vehicleType" required>
+            <option value="Vehicle">مركبة</option>
+            <option value="Bike">دراجة</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="model" class="form-label">الموديل</label>
+          <input type="text" disabled class="form-control" id="model" required>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="color" class="form-label">اللون</label>
+          <input type="text" disabled class="form-control" id="color" required>
+        </div>
+        <div class="col">
+          <label for="vehicleChassisNumber" class="form-label">رقم الشاصي</label>
+          <input type="text" disabled class="form-control" id="vehicleChassisNumber" required>
+        </div>
+        <div class="col">
+          <label for="vehiclePlateNumber" class="form-label">رقم اللوحة</label>
+          <input type="text" disabled class="form-control" id="vehiclePlateNumber" required>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="impoundedBookNumberSent" class="form-label">الكتاب المرقم</label>
+          <input type="number" class="form-control" id="impoundedBookNumberSent" required>
+        </div>
+        <div class="col">
+          <label for="impoundedBookQuantitySent" class="form-label">العدد </label>
+          <input type="number" class="form-control" id="impoundedBookQuantitySent" min="1" required>
+        </div>
+        <div class="col">
+          <label for="impoundedBuyerName" class="form-label">اسم المشتري</label>
+          <input type="text" class="form-control" id="impoundedBuyerName" required>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="impoundedDeliveryDate" class="form-label">تاريخ التسليم</label>
+          <input type="date" class="form-control" id="impoundedDeliveryDate" required>
+        </div>
+        <div class="col">
+          <label for="impoundedSaleFormNumber" class="form-label">استمارة البيع المرقمة  </label>
+          <input type="text" class="form-control" id="impoundedSaleFormNumber" required>
+        </div>
+      </div>
+
+      <button id="updateImpoundedButton" class="btn btn-primary mt-2">تحديث</button>
+      <button id="updateAndPrintButton" class="btn btn-success mt-2">تحديث & طبع</button>
+
+    </form>
+  </div>
+
+  <script type="module" src="./sendImpoundeds.js"></script>
+</body>
+</html>

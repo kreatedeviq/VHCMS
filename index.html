@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <link rel="stylesheet" href="src/resources/assets/styles/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/resources/assets/styles/global.css"> <!-- Link to the compiled global CSS file -->
+</head>
+<body id="index-page"> <!-- Add unique ID for targeting styles -->
+  <div id="login-container">
+    <img src="src/resources/assets/images/logo.png" alt="Logo" class="logo">
+    <h5>كمرك المنطقة الوسطى ساحة حجز المركبات والاليات</h5>
+      مسؤول الساحة احمد خالص خلف
+    <h2>تسجيل الدخول</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="اسم المستخدم" required value="admin">
+      <input type="password" id="password" placeholder="كلمة المرور" required value="admin">
+      <button type="submit">دخول</button>
+    </form>
+    <button id="startMySQLButton">تشغيل قواعد البيانات</button> <!-- Button to Start MySQL -->
+    <button id="checkConnectionButton">تجربة الاتصال</button> <!-- Button to Check MySQL Connection -->
+    
+    <button id="exitButton"><i class="fas fa-sign-out-alt icon"></i> اغلاق النظام</button>
+
+    <p id="message"></p> <!-- For login responses -->
+    <p id="connectionMessage"></p> <!-- For MySQL connection status -->
+    <p id="message2"></p> <!-- For sequential MySQL startup messages --> <!-- Add this line -->
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

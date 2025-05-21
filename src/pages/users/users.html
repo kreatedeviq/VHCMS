@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المستخدمين</title>
+</head>
+<body>
+  <div class="container mt-4">
+    <h1 class="mb-4">المستخدمين</h1>
+
+    <!-- Filter section -->
+    <div class="row mb-3">
+      <div class="col-md-3">
+        <input type="text" class="form-control" id="filter-name" placeholder="ابحث عن الاسم">
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" id="filter-username" placeholder="ابحث عن المستخدم">
+      </div>
+      <div class="col-md-3">
+        <input type="date" class="form-control" id="filter-created" placeholder="تاريخ الاضافة">
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-primary" id="filter-button">بحث</button>
+      </div>
+    </div>
+
+    <!-- Users table -->
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th><input type="checkbox" id="select-all"></th>
+            <th> ت</th>
+            <th>الاسم الكامل </th>
+            <th> اسم المستخدم</th>
+            <th> تاريخ الاضافة</th>
+            <th>تعديل</th>
+            <th>حذف</th>
+            <th>طبع A4</th>
+            <th>طبع A5</th>
+            <th>طبع 80mm</th>
+          </tr>
+        </thead>
+        <tbody id="user-table">
+          <!-- Table rows will be inserted here by users.js -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <!-- Modal for editing user -->
+<div id="editUserModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>تعديل المستخدم</h2>
+    <label for="newFullName">الاسم الكامل الجديد:</label>
+    <input type="text" id="newFullName">
+    <button id="saveEditButton">حفظ التعديلات</button>
+  </div>
+</div>
+
+
+  <script type="module" src="./users.js"></script>
+</body>
+</html>

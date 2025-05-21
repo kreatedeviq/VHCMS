@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إضافة مركبة محجوزة</title>
+</head>
+<body dir="rtl">
+  <div class="container">
+    <h1>إضافة مركبة محجوزة</h1>
+    <form id="addImpoundedForm">
+      <div class="row mb-3">
+        <div class="col">
+          <label for="vehicleNumber" class="form-label">رقم العجلة</label>
+          <input type="text" class="form-control" id="vehicleNumber" required>
+        </div>
+        <div class="col">
+          <label for="vehicleType" class="form-label">نوع العجلة</label>
+          <select class="form-select" id="vehicleType" required>
+            <option value="Vehicle">مركبة</option>
+            <option value="Bike">دراجة</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="model" class="form-label">الموديل</label>
+          <input type="text" class="form-control" id="model" required>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="color" class="form-label">اللون</label>
+          <input type="text" class="form-control" id="color" required>
+        </div>
+        <div class="col">
+          <label for="vehicleChassisNumber" class="form-label">رقم الشاصي</label>
+          <input type="text" class="form-control" id="vehicleChassisNumber" required>
+        </div>
+        <div class="col">
+          <label for="vehiclePlateNumber" class="form-label">رقم اللوحة</label>
+          <input type="text" class="form-control" id="vehiclePlateNumber" required>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="impoundedBookQuantity" class="form-label">بالعدد</label>
+          <input type="number" class="form-control" id="impoundedBookQuantity" min="1">
+        </div>
+        <div class="col">
+          <label for="impoundedCustomsCaseNumber" class="form-label">دعوة كمركية</label>
+          <input type="text" class="form-control" id="impoundedCustomsCaseNumber">
+        </div>
+        <div class="col">
+          <label for="impoundedReceptionDate" class="form-label">تاريخ الحجز</label>
+          <input type="date" class="form-control" id="impoundedReceptionDate">
+        </div>
+        <div class="col">
+          <label for="impoundedParkingSpotNumber" class="form-label">قطعة الحجز </label>
+          <input type="text" class="form-control" id="impoundedParkingSpotNumber">
+        </div>
+        <div class="col">
+          <label for="impoundedBookNumber" class="form-label">كتاب رقم</label>
+          <input type="text" class="form-control" id="impoundedBookNumber">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="impoundedRecieptionAuthority" class="form-label">الجهة الواردة</label>
+          <input type="text" class="form-control" id="impoundedRecieptionAuthority">
+        </div>
+        <div class="col">
+          <label for="impoundedDamagePercentage" class="form-label">نسبة الضرر</label>
+          <input type="number" class="form-control" id="impoundedDamagePercentage" min="0" max="100" step="1" placeholder="0 - 100%">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="receptionAttachments" class="form-label">مرفقات التسليم</label>
+        <input type="file" class="form-control" id="receptionAttachments" multiple>
+      </div>
+
+      <div id="loader" style="display: none;">Uploading...</div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">إضافة المركبة</button>
+        <button type="button" id="submitPrintButton" class="btn btn-secondary">إضافة & طباعة</button>
+        <button type="button" id="scanButton" class="btn btn-info">مسح ضوئي & رفع</button>
+      </div>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script type="module" src="./addImpoundeds.js"></script>
+</body>
+</html>
